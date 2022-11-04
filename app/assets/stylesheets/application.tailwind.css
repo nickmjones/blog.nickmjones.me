@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 16px;
+  font-family: 'Newsreader', Georgia, Times, serif;
+  line-height: 140%;
+}
+
+blockquote {
+  font-style: italic;
+  padding-left: 16px;
+  border-left: 1px solid #666;
+}
+
+.masthead {
+  font-family: 'Grenze Gotisch', serif;
+}

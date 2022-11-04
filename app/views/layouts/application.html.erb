@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlogNickmjonesMe</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="bg-slate-100 dark:bg-slate-900">
+    <main class="flex mx-auto max-w-4xl">
+      <div class="flex-col w-3/4 bg-white dark:bg-slate-400 p-10">
+        <!-- masthead -->
+        <div class="flex flex-col mb-28">
+          <h1 class="masthead text-5xl font-bold text-slate-700 dark:text-slate-900 pb-2">
+            <%= link_to "It's Probably Nothing", "/" %>
+          </h1>
+          <h3 class="text-sm text-sky-500 dark:text-white uppercase tracking-wider">
+            Written by Nick Jones
+          </h3>
+        </div>
+        <!-- /masthead -->
+        <%= yield %>
+      </div>
+      <%= render "shared/sidebar" %>
+    </main>
+  </body>
+</html>
