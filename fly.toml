@@ -1,14 +1,20 @@
-# fly.toml file generated for morning-glitter-3127 on 2022-11-04T11:14:58-04:00
+# fly.toml file generated for frosty-bush-477 on 2022-11-04T11:45:35-04:00
 
-app = "morning-glitter-3127"
+app = "frosty-bush-477"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
 [build]
-  image = "flyio/hellofly:latest"
+  [build.args]
+    BUILD_COMMAND = "bin/rails fly:build"
+    SERVER_COMMAND = "bin/rails fly:server"
+
+[deploy]
+  release_command = "bin/rails fly:release"
 
 [env]
+  PORT = "8080"
 
 [experimental]
   allowed_public_ports = []
@@ -39,3 +45,7 @@ processes = []
     interval = "15s"
     restart_limit = 0
     timeout = "2s"
+
+[[statics]]
+  guest_path = "/app/public"
+  url_prefix = "/"
