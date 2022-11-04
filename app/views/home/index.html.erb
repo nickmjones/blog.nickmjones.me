@@ -1,15 +1,19 @@
-<% @posts.each do |post| %>
-  <div class="mt-16">
-    <h2 class="text-3xl mb-4 text-slate-700">
-      <%= link_to post.title, post %>
-    </h2>
-    <div class="content font-serif text-slate-600">
-      <%= markdown(post.content) %>
+<% if @posts.present? %>
+  <% @posts.each do |post| %>
+    <div class="mt-16">
+      <h2 class="text-3xl mb-4 text-slate-700">
+        <%= link_to post.title, post %>
+      </h2>
+      <div class="content font-serif text-slate-600">
+        <%= markdown(post.content) %>
+      </div>
+      <div class="flex flex-row">
+        <span class="ml-auto text-slate-500">
+          <%= link_to post.created_at.strftime("%w %B"), post %>
+        </span>
+      </div>
     </div>
-    <div class="flex flex-row">
-      <span class="ml-auto text-slate-500">
-        <%= link_to post.created_at.strftime("%w %B"), post %>
-      </span>
-    </div>
-  </div>
+  <% end %>
+<% else %>
+  Hmm. There's nothing here. Sad.
 <% end %>
