@@ -1,0 +1,24 @@
+<div class="border border-gray-300 rounded-2xl p-6">
+  <%= form_for :session, url: session_path do |form| %>
+    <div class="text-field">
+      <%= form.label :email, class: "block text-slate-500" %>
+      <%= form.email_field :email, class: "bg-slate-100 rounded-md p-3 mb-2 min-w-full" %>
+    </div>
+
+    <div class="password-field mb-4">
+      <%= form.label :password, class: "block text-slate-500" %>
+      <%= form.password_field :password, class: "bg-slate-100 rounded-md p-3 mb-2 min-w-full" %>
+    </div>
+
+    <div class="submit-field mb-8">
+      <%= form.submit class: "bg-blue-500 text-white px-4 py-2 rounded-md" %>
+    </div>
+
+    <div class="other-links">
+      <% if Clearance.configuration.allow_sign_up? %>
+        <%= link_to t(".sign_up"), sign_up_path, class: "block" %>
+      <% end %>
+      <%= link_to t(".forgot_password"), new_password_path, class: "block" %>
+    </div>
+  <% end %>
+</div>

@@ -18,5 +18,9 @@
   <p class="text-xs text-slate-400 mb-8">
     Copyright &copy; <%= Time.zone.now.year %> Nick Jones. All rights reserved, all wrongs reversed.
   </p>
+  <% if signed_in? %>
+    Signed in as: <%= current_user.email %>
+    <%= button_to 'Sign out', sign_out_path, method: :delete %>
+  <% end %>
   <!-- /colophon -->
 </div>
