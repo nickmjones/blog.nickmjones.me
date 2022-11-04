@@ -1,5 +1,17 @@
 <div class="flex flex-col w-1/4 p-10 justify-center max-h-screen sticky top-0">
   <!-- colophon -->
+  <ul class="text-sm text-slate-600 mb-4">
+    <li class="text-xs text-blue-600 uppercase">Navigation</li>
+    <li>About</li>
+    <li>Archive</li>
+  </ul>
+  <ul class="text-sm text-slate-600 mb-4">
+    <li class="text-xs text-blue-600 uppercase">Elsewhere</li>
+    <li><%=link_to "Medium", "https://medium.com/@nickmjones", target: :_blank %></li>
+    <li><%=link_to"Mastodon", "https://mastodon.social/@nickmjones", target: :_blank, rel: :me %></li>
+    <li><%=link_to "Unsplash", "https://unsplash.com/@nickmjones", target: :_blank %></li>
+  </ul>
+  <span class="text-slate-400">&mdash;</span>
   <p class="text-sm text-slate-600 mb-4">
     Dispatches about product design, work, and life. Compiled semi-regularly in Providence.
   </p>
