@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 .content p {
-  font-size: 1.05rem;
   margin-bottom: 16px;
-  font-family: "Source Serif Pro", Georgia, Times, serif;
-  font-weight: 400;
-  line-height: 140%;
 }
 
 blockquote {
