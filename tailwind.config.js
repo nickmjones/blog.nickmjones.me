@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Futura", "Helvetica", "sans-serif"],
+      sans: ["League Spartan", "Helvetica", "sans-serif"],
       serif: ["Source Serif Pro", "Times New Roman", "serif"]
     }
   }
