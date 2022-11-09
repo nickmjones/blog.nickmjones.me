@@ -19,6 +19,12 @@
   text-decoration-thickness: 1px;
 }
 
+.footnotes {
+  font-size: 14px;
+  font-family: "Futura", Helvetica, Arial, sans-serif;
+  line-height: 18px;
+}
+
 blockquote {
   font-style: italic;
   padding-left: 16px;
