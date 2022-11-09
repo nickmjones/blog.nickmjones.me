@@ -1,25 +1,23 @@
-<div class="flex flex-col w-1/4 p-10 justify-center max-h-screen sticky top-0">
+<div class="p-9 md:p-10 md:h-screen sticky top-0 max-w-full md:w-2/6 justify-center md:flex md:flex-col text-lg">
   <!-- colophon -->
-  <ul class="text-sm text-slate-600 mb-4">
-    <li class="text-xs text-blue-600 uppercase">Navigation</li>
+  <ul class="text-slate-600 mb-4">
+    <li class="text-blue-600 uppercase">Navigation</li>
     <li><%=link_to "About", "/about" %></li>
   </ul>
-  <ul class="text-sm text-slate-600 mb-4">
-    <li class="text-xs text-blue-600 uppercase">Elsewhere</li>
+  <ul class="text-slate-600 mb-4">
+    <li class=" text-blue-600 uppercase">Elsewhere</li>
     <li><%=link_to "Medium", "https://medium.com/@nickmjones", target: :_blank %></li>
     <li><%=link_to"Mastodon", "https://mastodon.social/@nickmjones", target: :_blank, rel: :me %></li>
     <li><%=link_to "Unsplash", "https://unsplash.com/@nickmjones", target: :_blank %></li>
   </ul>
-  <span class="text-slate-400">&mdash;</span>
-  <p class="text-sm text-slate-600 mb-4">
+  <p class="text-slate-600 mb-4">
     Dispatches about product design, work, and life. Compiled semi-regularly in Providence.
   </p>
-  <p class="text-xs text-slate-400 mb-8">
+  <p class="text-sm text-slate-400 mb-8">
     Copyright &copy; <%= Time.zone.now.year %> Nick Jones. All rights reserved, all wrongs reversed.
   </p>
   <% if signed_in? %>
-    Signed in as: <%= current_user.email %>
-    <%= button_to 'Sign out', sign_out_path, method: :delete %>
+    <%= button_to '💀', sign_out_path, method: :delete %>
   <% end %>
   <!-- /colophon -->
 </div>

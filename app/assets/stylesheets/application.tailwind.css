@@ -11,3 +11,9 @@ blockquote {
   padding-left: 16px;
   border-left: 1px solid #666;
 }
+::-moz-selection {
+  background: #FFCD70;
+}
+::selection {
+  background: #FFCD70;
+}
