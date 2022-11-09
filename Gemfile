@@ -21,6 +21,7 @@ gem "bootsnap", require: false
 gem "administrate"
 gem "redcarpet"
 gem "friendly_id"
+gem "meta-tags"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
