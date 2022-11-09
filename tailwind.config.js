@@ -13,7 +13,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ["League Spartan", "Helvetica", "sans-serif"],
+      sans: ["Futura", "Helvetica", "sans-serif"],
       serif: ["Source Serif Pro", "Times New Roman", "serif"],
     }
   }
