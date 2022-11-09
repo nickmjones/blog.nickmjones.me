@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .content p {
   margin-bottom: 16px;
 }
 .content strong {
   font-weight: 700;
+}
+.content a {
+  color: #1D4ED8;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 blockquote {
