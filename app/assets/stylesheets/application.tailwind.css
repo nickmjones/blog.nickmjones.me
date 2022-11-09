@@ -5,6 +5,9 @@
 .content p {
   margin-bottom: 16px;
 }
+.content strong {
+  font-weight: 700;
+}
 
 blockquote {
   font-style: italic;
