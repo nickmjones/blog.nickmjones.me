@@ -1,8 +1,10 @@
-<div class="p-9 md:p-10 md:h-screen sticky top-0 max-w-full md:w-2/6 justify-center md:flex md:flex-col text-lg">
+<div class="p-9 md:p-10 md:h-screen max-w-full md:w-2/6 md:flex md:flex-col text-sm">
   <!-- colophon -->
   <ul class="text-slate-600 mb-4">
     <li class="text-red-800 dark:text-indigo-400 font-serif italic">Navigation</li>
+    <li><%=link_to "Home", "/" %></li>
     <li><%=link_to "About", "/about" %></li>
+    <li><%=link_to "Work", "/work" %></li>
   </ul>
   <ul class="text-slate-600 mb-4">
     <li class="text-red-800 dark:text-indigo-400 font-serif italic">Elsewhere</li>
@@ -12,10 +14,7 @@
     <li><%=link_to "Figma", "https://www.figma.com/@nickmjones", target: :_blank %></li>
     <li><%=link_to "Dribbble", "https://www.dribbble.com/nickmjones", target: :_blank %></li>
   </ul>
-  <p class="text-slate-600 mb-4">
-    Dispatches about product design, work, and life. Compiled semi-regularly in Providence.
-  </p>
-  <p class="text-sm text-slate-400 mb-8">
+  <p class="text-xs text-slate-400 mb-8">
     Copyright &copy; <%= Time.zone.now.year %> Nick Jones. All rights reserved, all wrongs reversed.
   </p>
   <% if signed_in? %>

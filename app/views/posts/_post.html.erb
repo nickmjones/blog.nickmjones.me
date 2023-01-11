@@ -1,15 +1,13 @@
 <% set_meta_tags title: post.title %>
 <%= display_meta_tags og: { title: post.title, type: 'A post on It\'s Probably Nothing' } %>
-<div class="mt-16">
-  <h2 class="text-3xl font-serif italic mb-4 text-slate-600 dark:text-slate-300">
-    <%= link_to post.title, post %>
-  </h2>
-  <div class="content font-serif text-slate-600 dark:text-slate-400 text-xl md:text-md">
-    <%= markdown(post.content) %>
-  </div>
-  <div class="flex flex-row mt-4">
-    <span class="ml-auto text-slate-500 text-sm">
-      ⌘ <%= link_to post.created_at.strftime("%e %B"), post %>
-    </span>
-  </div>
+<h2 class="text-xl font-sans font-bold mb-4 text-slate-900 dark:text-slate-300">
+  <%= link_to post.title, post %>
+</h2>
+<div class="content font-serif text-slate-900 dark:text-slate-400 text-l md:text-md">
+  <%= markdown(post.content) %>
+</div>
+<div class="flex flex-row mt-4">
+  <span class="ml-auto text-slate-500 text-sm">
+    ⌘ <%= link_to post.created_at.strftime("%e %B"), post %>
+  </span>
 </div>
